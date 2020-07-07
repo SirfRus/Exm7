@@ -1,0 +1,34 @@
+table {
+    margin: 2% auto;
+    width: 90%;
+    border: 2.5px solid black;
+    text-align: center;
+}
+table thead tr {
+    border-bottom: 2px solid black;
+}
+table thead th {
+    border: 0;
+}
+table tbody tr {
+    border-bottom: 2px solid grey;
+}
+#but {
+    margin-left: 5%;        
+    float: left;
+}
+#filt {
+    margin: 1% auto;
+    width: 90%;
+    border: 2px solid grey;
+    text-align: center;
+}
+#filt input {
+    border: 1px solid grey;
+    width: 20%;
+    height: 30px;
+    margin: 1%;
+}
+h1 {
+    text-align: center;    
+}

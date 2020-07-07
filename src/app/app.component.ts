@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Frolov1020';
+
+  editId;
+  checker: boolean = false;
+
+  getId(id) {
+    this.editId = id;        
+  }
 }

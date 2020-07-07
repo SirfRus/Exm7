@@ -1,0 +1,48 @@
+<h1>Фильтрация по категории и количеству</h1>   
+<div id="filt">       
+  <mat-form-field class="example-full-width">
+    <mat-label>Категория товара</mat-label>
+    <select matNativeControl [(ngModel)]="categoryinp">
+      <option value="Все">Все</option>
+      <option value="Мебель">Мебель</option>
+      <option value="Техника">Техника</option>
+      <option value="Книги">Книги</option>
+      <option value="Телефоны">Телефоны</option>          
+    </select>
+  </mat-form-field>  
+  <input matInput placeholder="Количество" [(ngModel)]="countinp"/>  
+</div>  
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" [style.width]="'5%'">ID</th>
+      <th scope="col" [style.width]="'15%'">Название</th>
+      <th scope="col" [style.width]="'15%'">Артикул</th>
+      <th scope="col" [style.width]="'15%'">Категория</th>
+      <th scope="col" [style.width]="'15%'">Производитель</th>
+      <th scope="col" [style.width]="'11%'">Цена</th>
+      <th scope="col" [style.width]="'11%'">Вес</th>
+      <th scope="col" [style.width]="'11%'">Кол-во на складе</th> 
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>  
+  <tbody>
+    <tr *ngFor="let item of ProdList | sortpipe: categoryinp: countinp">
+      <th scope="col" [style.width]="'5%'">{{item.id}}</th>
+      <th scope="col" [style.width]="'15%'">{{item.name}}</th>
+      <th scope="col" [style.width]="'15%'">{{item.articul}}</th>
+      <th scope="col" [style.width]="'15%'">{{item.category}}</th>
+      <th scope="col" [style.width]="'15%'">{{item.prod}}</th>
+      <th scope="col" [style.width]="'11%'">{{item.price}} руб.</th>
+      <th scope="col" [style.width]="'11%'">{{item.weight}} кг</th>
+      <th scope="col" [style.width]="'11%'">{{item.count}} шт.</th>
+      <th><button mat-raised-button (click)="editrec(item.id)">Изменить</button></th>
+      <th><button mat-raised-button (click)="delrec(item.id)">Удалить</button></th>
+    </tr>        
+  </tbody>
+</table>
+<div id="but">              
+  <button mat-raised-button (click)="addrec()">+</button>
+  <button mat-raised-button (click)="delastrec()">-</button>
+</div>    

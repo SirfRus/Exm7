@@ -1,0 +1,87 @@
+<div id="main">
+    <h1>Добавить/редактировать запись о товаре</h1>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Название</mat-label>
+            <input matInput [formControl]="Name" placeholder="Название">
+            <mat-error *ngIf="Name.hasError('pattern') && !Name.hasError('required')">
+            Название некорректно
+            </mat-error>
+            <mat-error *ngIf="Name.hasError('required')">
+            Введите <strong>название</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Артикул</mat-label>
+            <input matInput [formControl]="Articul" placeholder="Артикул">
+            <mat-error *ngIf="Articul.hasError('pattern') && !Articul.hasError('required')">
+            Введено некорректно
+            </mat-error>
+            <mat-error *ngIf="Articul.hasError('required')">
+            Введите <strong>артикул</strong>
+            </mat-error>
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Категория товара</mat-label>
+            <select matNativeControl [formControl]="Category">
+              <option value="Мебель">Мебель</option>
+              <option value="Техника">Техника</option>
+              <option value="Книги">Книги</option>
+              <option value="Телефоны">Телефоны</option>          
+            </select>
+            <mat-error *ngIf="Articul.hasError('required')">
+                Выберите <strong>категорию</strong>
+            </mat-error>
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Производитель</mat-label>
+            <input matInput [formControl]="Prod" placeholder="Производитель">
+            <mat-error *ngIf="Prod.hasError('pattern') && !Prod.hasError('required')">
+            Название некорректно
+            </mat-error>
+            <mat-error *ngIf="Prod.hasError('required')">
+            Введите <strong>название производителя</strong>
+            </mat-error>
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Цена</mat-label>
+            <input matInput [formControl]="Price" placeholder="Цена">
+            <mat-error *ngIf="Price.hasError('pattern') && !Price.hasError('required')">
+            Ввод некорректен
+            </mat-error>
+            <mat-error *ngIf="Price.hasError('required')">
+            Введите <strong>цену товара</strong>
+            </mat-error>
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Вес</mat-label>
+            <input matInput [formControl]="Weight" placeholder="Вес"> 
+            <mat-error *ngIf="Weight.hasError('pattern') && !Weight.hasError('required')">
+            Ввод некорректен
+            </mat-error>
+            <mat-error *ngIf="Weight.hasError('required')">
+            Введите <strong>вес товара</strong>
+            </mat-error>
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Кол-во</mat-label>
+            <input matInput [formControl]="Count" placeholder="Кол-во">
+            <mat-error *ngIf="Count.hasError('pattern') && !Count.hasError('required')">
+            Ввод некорректен
+            </mat-error>
+            <mat-error *ngIf="Count.hasError('required')">
+            Введите <strong>кол-во товара</strong>
+            </mat-error>
+        </mat-form-field>
+    </form>
+    <div id="but">        
+        <button (click)="addrecord()" mat-raised-button [disabled]="checker || Name.hasError('pattern') && !Name.hasError('required') || Name.hasError('required') || Articul.hasError('pattern') && !Articul.hasError('required') || Articul.hasError('required') || Prod.hasError('pattern') && !Prod.hasError('required') || Prod.hasError('required') || Price.hasError('pattern') && !Price.hasError('required') || Price.hasError('required') || Weight.hasError('pattern') && !Weight.hasError('required') || Weight.hasError('required') || Count.hasError('pattern') && !Count.hasError('required') || Count.hasError('required')">Добавить запись</button>        
+        <button mat-raised-button [disabled]="!checker" (click)="acceptrecord()">Применить отредактированную запись</button>
+    </div>
+</div>

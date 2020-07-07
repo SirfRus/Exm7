@@ -1,0 +1,54 @@
+{
+  "catalog": [
+    {
+      "id": 0,
+      "name": "Диван",
+      "articul": "Mebel_top",
+      "category": "Мебель",
+      "price": 5000,
+      "prod": "IKEA",
+      "weight": 200,
+      "count": 50
+    },
+    {
+      "id": 1,
+      "name": "Телевизор",
+      "articul": "teletop",
+      "category": "Техника",
+      "price": "5000",
+      "prod": "samsung",
+      "weight": "20",
+      "count": "500"
+    },
+    {
+      "id": 2,
+      "name": "Война и Мир",
+      "articul": "Book_top",
+      "category": "Книги",
+      "price": 200,
+      "prod": "Печать",
+      "weight": 10,
+      "count": 1
+    },
+    {
+      "id": 3,
+      "name": "Asus ZTE",
+      "articul": "Phone_top",
+      "category": "Телефоны",
+      "price": 5000,
+      "prod": "ASUS",
+      "weight": 5,
+      "count": 500
+    },
+    {
+      "id": 4,
+      "name": "asd",
+      "articul": "asd",
+      "category": "Книги",
+      "price": "235",
+      "prod": "asd",
+      "weight": "235",
+      "count": "26"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+#main {
+    margin: 1% auto;
+    width: 90%;
+    border: 2px solid grey;
+}
+#main mat-form-field {    
+    margin: 1% 1.2%;
+    padding: 5px;    
+}
+#main h1 {
+    margin: 1% auto;
+    text-align: center;
+    border-bottom: 2px solid grey;
+}
+#but {
+    margin: 1%;    
+    height: auto;    
+}
+#but button {
+    margin: 0 1%;
+}
